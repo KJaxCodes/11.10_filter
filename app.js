@@ -19,3 +19,25 @@ const planets = [
     { name: "Uranus", temperature: 78, distance: 19.22 },
     { name: "Neptune", temperature: 73, distance: 30.05 }
 ];
+
+const habitablePlanets = planets.filter(function (planet) {             //create variable to hold new array of habitable planets
+    return planet.temperature >= 253 && planet.temperature <= 323 &&    //return planets in habitable temp range
+        planet.distance >= 0.75 && planet.distance <= 1.5;              //AND planets in habitable distance range
+});
+
+console.log(habitablePlanets);                                          //print new array
+
+//0: {name: 'Earth', temperature: 288, distance: 1}
+//1:{name: 'Mars', temperature: 253, distance: 1.5}
+
+
+
+
+// planets.filter(function (value, idx, arr) {
+//     return value.temperature >= 253 && value.temperature <= 323;
+// })
+
+
+// planets.filter(function(value, idx, arr){
+//     return value.distance >= 0.75 && value.distance <= 1.5;
+// })
